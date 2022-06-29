@@ -15,6 +15,11 @@ jobs:
     with:
       username: "test"
   job2:
+    environment: ${{ github.ref_name }}
     runs-on: ubuntu-latest
     steps:
-      - run: echo ${{ github.ref_name }}
+      - run: |
+          echo ${{ github.ref_name }}
+          echo $TESTSECRET
+        env:
+          TESTSECRET: ${{ secrets.SEC1 }}

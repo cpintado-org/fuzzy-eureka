@@ -15,6 +15,7 @@ jobs:
     with:
       username: "test"
       environ: ${{ github.ref_name }}
+
   job2:
     environment: ${{ github.ref_name }}
     runs-on: ubuntu-latest

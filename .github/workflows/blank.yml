@@ -15,7 +15,7 @@ jobs:
     with:
       username: "test"
       environ: ${{ github.ref_name }}
-#    secrets: inherit
+      secrets: inherit
 
   job2:
     environment: ${{ github.ref_name }}
